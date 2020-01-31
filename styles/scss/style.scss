@@ -1,0 +1,900 @@
+@import 'partials/setup';
+@import 'partials/variables';
+
+// General styles
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $dark;
+}
+
+h2 {
+    font-size: 80px;
+    line-height: 0.72em;
+}
+
+h3 {
+    font-size: 42px;
+    line-height: 1em;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 1em;
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-size: 26px;
+    line-height: 3em;
+}
+
+p,
+button,
+input,
+textarea {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+button {
+    background-color: $accent;
+    padding: 3px 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover,
+button:focus {
+    color: $secondary;
+    background-color: $primary;
+}
+
+.mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.abril {
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+}
+
+// Header styles 
+
+header {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .mont {
+    font-weight: bold;
+}
+
+header a {
+    font-size: 20px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header li {
+    margin: 20px 20px;
+}
+
+header a {
+    line-height: 29px;
+    transition: color 0.3s ease-in-out;
+}
+
+header a:hover,
+header a:focus {
+    color: $dark;
+}
+
+// Home header styles
+
+.home-header {
+    height: 100vh;
+    background-color: $primary;
+}
+
+.home-header .home {
+    color: $accent;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.name {
+    min-width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 230px;
+}
+
+h1 {
+    font-size: calc(30px + 9vw); // Retrieved from https://www.codementor.io/@ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
+    margin: 0;
+    position: relative;
+    right: 8%;
+}
+
+.daily {
+    width: 35%;
+    height: 35%;
+}
+
+.girl {
+    min-width: 15rem;
+    width: 45%;
+    height: 100%;
+}
+
+// Contact header styles
+
+.contact-header nav {
+    background-color: $primary;
+}
+
+.contact-header .contact {
+    color: $accent;
+}
+
+.contact-container {
+    background-image: url(assets/contact-image-1.jpg);
+    background-size: auto;
+    background-attachment: local;
+    height: 45vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+// Blog header styles
+
+.blog-header nav {
+    background-color: $primary;
+}
+
+.blog-header .blog {
+    color: $accent;
+}
+
+.blog-news {
+    background-image: url(assets/blog-image-1.jpg);
+    background-size: auto;
+    background-attachment: local;
+    height: 45vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+// Home main styles
+
+.about {
+    background-color: $secondary;
+    text-align: center;
+}
+
+.about .wrapper {
+    line-height: 90px;
+    padding: 125px 0 100px;
+}
+
+.about h3,
+.journey h3 {
+    margin-bottom: 30px;
+}
+
+.favourite .wrapper,
+.bucket .wrapper,
+.journey .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-container,
+.content {
+    width: 50%;
+    margin: 0;
+    height: 40rem;
+    position: relative;
+}
+
+.shadow-rectangle {
+    width: 51.3%;
+    height: 40rem;
+}
+
+.light {
+    background-color: $light;
+}
+
+.dark {
+    background-color: $primary;
+}
+
+.content {
+    line-height: 110px;
+}
+
+.favourite {
+    position: relative;   
+}
+
+.favourite .shadow-rectangle {
+    position: absolute;
+    bottom: 20px;
+}
+
+.favourite img {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favourite .content {
+    padding-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 20px;
+}
+
+.favourite p {
+    margin-bottom: 30px;
+}
+
+.favourite button {
+    width: 158.2px;
+}
+
+.bucket {
+    position: relative;
+    margin-top: 80px;
+}
+
+.bucket .shadow-rectangle {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+}
+
+.bucket img {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bucket .content {
+    text-align: right;
+    padding-right: 110px;
+}
+
+.journey {
+    background-color: $secondary;
+    padding: 100px 0 70px;
+    margin-top: -20px;
+}
+
+.journey .img-container {
+    width: 35%;
+    position: relative;
+}
+
+.shadow-square {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.journey img {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.journey .content {
+    width: 65%;
+    padding-left: 10%;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+
+.photos img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.photos img:hover,
+.photos img:focus {
+    transform: scale(1.2);
+}
+
+.photos li:nth-of-type(2) {
+    margin: 0 3%;
+}
+
+// Form styles
+
+.contact-form {
+    width: 65%;
+    height: 50vh;
+}
+
+.blog-form {
+    width: 100%;
+}
+
+form input,
+textarea {
+    background-color: #fff;
+    margin: 0 15px 15px 0;   
+}
+
+.name-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=text],
+input[type=email] {
+    padding: 20px;
+    width: 50%;
+}
+
+input[type=email] {
+    margin-right: 0;
+}
+
+textarea {
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    resize: none; //Retrieved from https://stackoverflow.com/questions/6340545/how-to-remove-dots-present-at-the-right-bottom-corner-of-the-textarea-html
+}
+
+button[type=submit] {
+    width: 100%;
+}
+
+// Contact main styles
+
+.contact-main {
+    background-color: $secondary;
+    padding: 85px 0;
+    font-size: 20px;
+}
+
+.contact-main .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-container {
+    background-color: #fff;
+    padding: 30px;
+    width: 33%;
+    height: 310px;
+}
+
+.social {
+    display: flex;
+    color: $primary;
+    font-size: 30px;
+    li {
+        margin-right: 35px;
+    }
+}
+
+.fab {
+    transition: all 0.4s ease-in-out;
+}
+
+.fab:hover,
+.fab:focus {
+    transform: scale(1.3);
+    color: $accent;
+}
+
+.info-email {
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.address {
+    line-height: 2em;
+}
+
+// Blog aside & main styles
+
+.blog-whole {
+    background-color: $secondary;
+    padding: 100px 0;
+}
+
+.blog-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    width: 31.5%;
+}
+
+.blog-about {
+    background-color: #fff;
+    padding: 30px;
+    h5 {
+        padding: 10px 0 0;
+    }
+}
+
+.find {
+    color: $light;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+.find:hover,
+.find:focus {
+    color: $primary;
+}
+
+.recent {
+    background-color: #fff;
+    padding: 15px 30px 30px;
+    margin-top: 15px;
+    ul {
+        font-size: 20px;
+    }
+}
+
+.recent li:before {
+    content: '·';
+    font-size: 31px;
+    padding: 0 30px 0 13px;
+}
+
+.recent a {
+    transition: all 0.3s ease-in-out;
+}
+.recent a:hover,
+.recent a:focus {
+    color: $accent;
+    text-decoration: underline;
+}
+
+.blog-main {
+    width: 66%;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 30px 30px 10px;
+    border-bottom: 5px solid $light;
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.extra-1,
+.extra-2 {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+    div {
+        margin-left: 15px;
+    }
+}
+
+.extra-2 {
+    border-bottom: 5px solid $light;
+}
+
+.blog-form {
+    margin-top: 30px;
+}
+
+// Footer styles
+
+.copyright {
+    text-align: center;
+    background-color: $dark;
+    color: #fff;
+    padding: 5px 0;
+}
+
+// Home footer styles
+
+.footer-menu {
+    background-color: $secondary;
+    padding: 50px 0;
+}
+
+.footer-menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        width: 49%;
+        display: flex;
+        margin: 20px 0;
+        h4 {
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+footer i {
+    font-size: 20px;
+    background: $accent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+footer a:hover .fas,
+footer a:focus .fas {
+    transform: scale(1.3);
+    background: $primary;
+    color: $accent;
+}
+
+// Media queries
+
+// Desktop
+
+@media (max-width: 1370px) {
+    .recent li {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .recent li:before {
+        padding-right: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .daily {
+        width: 45%;
+        height: 45%;
+        position: relative;
+        left: 16px;
+    }
+
+    .favourite .content p,
+    .bucket .content p {
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+
+    .journey .content p {
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+
+    .info-container {
+        height: 260px;
+    }
+
+    .info-email {
+        font-size: 13px;
+    }
+
+    .telephone {
+        font-size: 13px;
+    }
+
+    .address {
+        font-size: 13px;
+    }
+
+    .recent li {
+        font-size: 15px;
+    }
+
+    .recent li:before {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .daily {
+        width: 53%;
+        height: 53%;
+    }
+
+    .contact-main .wrapper {
+        display: block;
+    }
+
+    .info-container {
+        height: auto;
+        width: 100%;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    .blog-wrapper {
+        display: initial;
+    }
+
+    aside {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .recent li {
+        font-size: 20px;
+    }
+
+    .recent li:before {
+        font-size: 27px;
+        padding: 0 30px 0 13px;
+    }
+
+    .blog-main {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .blog-post {
+        padding-top: 20px;
+    }
+
+    .contact-form {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .blog-form input[type=email] {
+        padding-right: 0;
+    }
+
+    .info-email {
+        font-size: 20px;
+    }
+
+    .telephone {
+        font-size: 20px;
+    }
+
+    .address {
+        font-size: 20px;
+    }
+}
+
+// Small desktop
+
+@media (max-width: 945px) {
+    .daily {
+        width: 55%;
+        height: 55%;
+    }
+
+    .journey .wrapper {
+        justify-content: space-between;
+    }
+
+    .blog-form input,
+    .blog-form textarea {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .daily {
+        width: 75%;
+        height: 75%;
+    }
+}
+
+// Tablet to large mobile
+
+@media (max-width: 768px) {
+    .name-container {
+        display: initial;
+    }
+
+    .name {
+        margin-top: 120px;
+    }
+
+    h1 {
+        right: 4%;
+    }
+
+    .daily {
+        width: 13%;
+        height: 13%;
+    }
+
+    .girl {
+        margin: 50px auto;
+    }
+
+    .about .wrapper {
+        padding: 15% 0 10px;
+    }
+
+    .favourite .wrapper,
+    .bucket .wrapper,
+    .journey .wrapper {
+        display: initial;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .favourite .content {
+        width: 90%;
+        padding: 60px 0;
+        margin: 0 auto;
+        text-align: left;
+        height: auto;
+        bottom: 0;
+    }
+
+    .bucket {
+        margin: 0;
+    }
+
+    .bucket .content {
+        width: 90%;
+        padding: 30px 0;
+        margin: 0 auto;
+        text-align: left;
+        height: auto;
+    }
+
+    .shadow-rectangle {
+        display: none;
+    }
+
+    .journey {
+        padding: 50px 0 0;
+    }
+
+    .journey .content {
+        width: 90%;
+        padding: 0;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 760px) {
+    header li:nth-of-type(3) {
+        display: none;
+    }
+
+    header li {
+        margin: 20px 8px;
+    }
+}
+
+@media (max-width: 650px) {
+    .about .wrapper {
+        padding-top: 10%;
+    }
+
+    input[type=email] {
+        padding-right: 0;
+    }
+
+    .contact-form input,
+    textarea {
+        font-size: 15px;
+    }
+
+    .footer-menu .wrapper {
+        display: block;
+    }
+
+    .footer-menu h4 {
+        display: grid;
+        grid-template-columns: max-content;
+    }
+        
+    .footer-menu p {
+        display: none;
+    }
+}
+
+@media (max-width: 510px) {
+    .blog-post h5 {
+        line-height: 1.3em;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .journey {
+        height: 450px;
+    }
+
+    input[type=email] {
+        padding: 0;
+        word-wrap: break-word;
+    }
+
+    form input,
+    textarea {
+        background-color: #fff;
+        margin: 0 3px 3px 0;   
+    }
+}
+
+// Small mobile
+
+@media (max-width: 475px) {
+    .journey {
+        height: 480px;
+    }
+
+    .journey h3 {
+        font-size: 35px;
+    }
+
+    .blog-title {
+        font-size: 50px;
+    }
+
+    .recent li {
+        font-size: 17px;
+    }
+
+    .recent li:before {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    h2 {
+        font-size: 50px;
+    }
+}
