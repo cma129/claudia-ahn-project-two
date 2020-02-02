@@ -452,6 +452,7 @@ header a:focus {
 .home-header {
   height: 100vh;
   background-color: #345231;
+  position: relative;
 }
 
 .home-header .home {
@@ -483,18 +484,35 @@ h1 {
   font-size: calc(30px + 9vw);
   margin: 0;
   position: relative;
-  right: 8%;
+  right: 10%;
+  z-index: 100;
 }
 
 .daily {
-  width: 35%;
-  height: 35%;
+  width: 90%;
+  height: 90%;
 }
 
 .girl {
   min-width: 15rem;
-  width: 45%;
-  height: 100%;
+  height: auto;
+  z-index: 99;
+  position: absolute;
+  top: 10px;
+}
+
+.home-header .img-container {
+  width: 100%;
+}
+
+.shadow-rectangle-1 {
+  width: 99%;
+  height: 69.5em;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 32px;
+  left: 3%;
 }
 
 .contact-header nav {
@@ -573,7 +591,7 @@ h1 {
   position: relative;
 }
 
-.shadow-rectangle {
+.shadow-rectangle-2 {
   width: 51.3%;
   height: 40rem;
 }
@@ -594,7 +612,7 @@ h1 {
   position: relative;
 }
 
-.favourite .shadow-rectangle {
+.favourite .shadow-rectangle-2 {
   position: absolute;
   bottom: 20px;
 }
@@ -637,7 +655,7 @@ h1 {
   margin-top: 80px;
 }
 
-.bucket .shadow-rectangle {
+.bucket .shadow-rectangle-2 {
   position: absolute;
   top: 20px;
   right: -40px;
@@ -988,6 +1006,9 @@ footer a:focus .fas {
 }
 
 @media (max-width: 1370px) {
+  .shadow-rectangle-1 {
+    height: 68em;
+  }
   .recent li {
     font-size: 17px;
     line-height: 30px;
@@ -999,11 +1020,17 @@ footer a:focus .fas {
 }
 
 @media (max-width: 1240px) {
+  .home-header {
+    height: 800px;
+  }
   .daily {
-    width: 45%;
-    height: 45%;
+    width: 90%;
+    height: 90%;
     position: relative;
     left: 16px;
+  }
+  .shadow-rectangle-1 {
+    height: 60em;
   }
   .favourite .content p,
   .bucket .content p {
@@ -1036,10 +1063,22 @@ footer a:focus .fas {
   }
 }
 
+@media (max-width: 1100px) {
+  .shadow-rectangle-1 {
+    height: 54em;
+  }
+}
+
 @media (max-width: 1000px) {
+  .home-header {
+    height: 600px;
+  }
   .daily {
-    width: 53%;
-    height: 53%;
+    width: 80%;
+    height: 80%;
+  }
+  .shadow-rectangle-1 {
+    height: 49em;
   }
   .contact-main .wrapper {
     display: block;
@@ -1051,12 +1090,29 @@ footer a:focus .fas {
   h5 {
     font-size: 20px;
   }
+  .blog-news,
+  .contact-container {
+    background-size: 100%;
+    background-attachment: initial;
+    height: 220px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100vw;
+  }
+  .blog-whole {
+    padding-bottom: 50px;
+  }
   .blog-wrapper {
     display: initial;
   }
   aside {
     width: 90%;
     margin: 15px auto;
+  }
+  .blog-about img {
+    width: 60%;
+    margin: 0 auto;
   }
   .recent li {
     font-size: 20px;
@@ -1093,8 +1149,11 @@ footer a:focus .fas {
 
 @media (max-width: 945px) {
   .daily {
-    width: 55%;
-    height: 55%;
+    width: 76%;
+    height: 76%;
+  }
+  .shadow-rectangle-1 {
+    height: 46em;
   }
   .journey .wrapper {
     -webkit-box-pack: justify;
@@ -1109,12 +1168,31 @@ footer a:focus .fas {
 
 @media (max-width: 900px) {
   .daily {
-    width: 75%;
-    height: 75%;
+    width: 65%;
+    height: 65%;
+  }
+  .shadow-rectangle-1 {
+    height: 43.5em;
+  }
+  .journey .img-container {
+    width: 45%;
+  }
+  .journey .content {
+    width: 55%;
+  }
+  .journey .content h3 {
+    font-size: 30px;
+  }
+  .blog-news,
+  .contact-container {
+    background-size: 130%;
   }
 }
 
 @media (max-width: 768px) {
+  .home-header {
+    height: 1000px;
+  }
   .name-container {
     display: initial;
   }
@@ -1128,8 +1206,19 @@ footer a:focus .fas {
     width: 13%;
     height: 13%;
   }
+  .home-header .img-container {
+    width: 100%;
+    text-align: center;
+  }
   .girl {
+    position: initial;
+    z-index: 0;
+    width: 70%;
+    display: inline-block;
     margin: 50px auto;
+  }
+  .shadow-rectangle-1 {
+    display: none;
   }
   .about .wrapper {
     padding: 15% 0 10px;
@@ -1139,7 +1228,9 @@ footer a:focus .fas {
   .journey .wrapper {
     display: initial;
   }
-  .img-container {
+  .favourite .img-container,
+  .bucket .img-container,
+  .journey .img-container {
     display: none;
   }
   .favourite .content {
@@ -1160,11 +1251,12 @@ footer a:focus .fas {
     text-align: left;
     height: auto;
   }
-  .shadow-rectangle {
+  .shadow-rectangle-2 {
     display: none;
   }
   .journey {
     padding: 50px 0 0;
+    height: 370px;
   }
   .journey .content {
     width: 90%;
@@ -1184,11 +1276,27 @@ footer a:focus .fas {
   header li {
     margin: 20px 8px;
   }
+  .blog-whole {
+    padding-top: 50px;
+  }
+  .blog-news,
+  .contact-container {
+    background-size: 180%;
+  }
 }
 
 @media (max-width: 650px) {
+  .home-header {
+    height: 700px;
+  }
+  .girl {
+    width: 50%;
+  }
   .about .wrapper {
     padding-top: 10%;
+  }
+  .journey {
+    height: 410px;
   }
   input[type=email] {
     padding-right: 0;
@@ -1213,9 +1321,16 @@ footer a:focus .fas {
 }
 
 @media (max-width: 510px) {
+  .blog-news,
+  .contact-container {
+    background-size: 210%;
+  }
   .blog-post h5 {
     line-height: 1.3em;
     margin-bottom: 30px;
+  }
+  .blog-about img {
+    width: 80%;
   }
 }
 
@@ -1236,7 +1351,7 @@ footer a:focus .fas {
 
 @media (max-width: 475px) {
   .journey {
-    height: 480px;
+    height: 470px;
   }
   .journey h3 {
     font-size: 35px;
@@ -1255,5 +1370,15 @@ footer a:focus .fas {
 @media (max-width: 430px) {
   h2 {
     font-size: 50px;
+  }
+  .journey {
+    height: 480px;
+  }
+  .blog-news,
+  .contact-container {
+    background-size: 230%;
+  }
+  .blog-about img {
+    width: 100%;
   }
 }
